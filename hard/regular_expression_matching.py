@@ -1,4 +1,30 @@
 #작업중
+'''
+test case
+"aa"
+"a"
+"aa"
+"a*"
+"ab"
+".*"
+"aab"
+"c*a*b"
+"mississippi"
+"mis*is*p*."
+"abc"
+"a*c"
+"abc"
+"a.c"
+"aaa"
+"a*"
+"aaa"
+"a."
+"aab"
+"a*."
+"aab"
+"a*"
+'''
+
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
         print(p)
