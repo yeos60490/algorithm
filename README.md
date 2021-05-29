@@ -1,4 +1,4 @@
-#### algorithm study
+### algorithm study
 
 - leetcode
 - programmers
