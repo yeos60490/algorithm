@@ -16,7 +16,7 @@ class Solution:
                 root = root.left
             else:
                 pre = stack.pop()
-                answer.append(pre.val)
+                answer.append(pre.val) #inorder는 여기서 출력 
                 root = pre.right
                 
                 
