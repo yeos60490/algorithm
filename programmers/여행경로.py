@@ -45,3 +45,4 @@ def solution(tickets):
                 
 
     return answer[::-1]
+
