@@ -1,4 +1,4 @@
-## list.startswith()
+## str.startswith(str), str.endswith(str)
 
 def solution(phone_book):
     phone_book.sort()
