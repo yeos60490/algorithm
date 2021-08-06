@@ -1,12 +1,15 @@
-origin = input()
-after = ''
+def solution(text):
+	answer = ''
+	for i in text:
+		if (i >= 'A' and i <= 'M') or (i >= 'a' and i <= 'm'):
+			answer += chr(ord(i)+13)
+		elif (i >'M' and i <= 'Z') or (i > 'm' and i <= 'z'):
+			answer += chr(ord(i)-13)
+		else:
+			answer += i
 
-for i in origin:
-	if (i >= 'A' and i <= 'M') or (i >= 'a' and i <= 'm'):
-		after += chr(ord(i)+13)
-	elif (i >'M' and i <= 'Z') or (i > 'm' and i <= 'z'):
-		after += chr(ord(i)-13)
-	else:
-		after += i
+	return answer
 
-print(after)
+
+if __name__ == '__main__':
+	print(solution(input()))
