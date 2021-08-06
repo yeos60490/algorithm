@@ -19,16 +19,22 @@
       sorted(array, key=lambda x:x[1])
       
 
-- collections (hash)
+- collections 1 : counter (hash)
 
       import collections
       result = collections.Counter(list) 
       ##result = Counter({1: 개수, 2: 개수, 3: 개수})
 
+- collections 2 : defaultdict
 
       from collections import defaultdict
       dict_a = defaultdict(list) ##list dict 로 init
       
+- collections 3 : deque
+
+      from collections import deque
+      deq = deque()
+      ##append, appendleft, pop, popleft, rotate, 
 
 - str
 
