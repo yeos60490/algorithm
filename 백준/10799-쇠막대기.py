@@ -1,3 +1,4 @@
+
 from collections import deque
 
 def solution(text):
@@ -19,7 +20,7 @@ def solution(text):
 		else:
 			stack.append(i)
 
-    return answer
+	return answer
 		
 if __name__ == '__main__':
 	print(solution(input()))
