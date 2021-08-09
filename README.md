@@ -35,6 +35,16 @@
       from collections import deque
       deq = deque()
       ##append, appendleft, pop, popleft, rotate, reserve, clear, remove, 
+      
+- collections 4 : OrderedDict
+
+      from collections import OrderedDict
+      dic = OrderedDict(zip(list1,list2)) ## zip은 두개의 리스트 key, value 로 합치기
+      
+      dic.popitem(last=True) ## 마지막 pop, False : 처음 pop
+      dic.move_to_end(key, last=True) ## 마지막으로 이동, False : 처음으로 이동
+      dic.update({key,value}) ## 새로운 것 삽입
+          
 
 - str
 
