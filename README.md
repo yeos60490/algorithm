@@ -34,7 +34,7 @@
 
       from collections import deque
       deq = deque()
-      ##append, appendleft, pop, popleft, rotate, 
+      ##append, appendleft, pop, popleft, rotate, reserve, clear, remove, 
 
 - str
 
