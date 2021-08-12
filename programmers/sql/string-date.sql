@@ -1,0 +1,15 @@
+1. 루시와 엘라 찾기
+
+SELECT ANIMAL_ID, NAME, SEX_UPON_INTAKE
+FROM ANIMAL_INS
+WHERE NAME IN ('Lucy', 'Ella', 'Pickle', 'Sabrina', 'Mitty')
+ORDER BY ANIMAL_ID ANS
+
+2. 이름에 el이 들어가는 동물 찾기
+
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
+WHERE NAME LIKE '%el%' AND ANIMAL_TYPE = 'Dog'
+ORDER BY NAME 
+
+3. 중성화 여부 파악하기
