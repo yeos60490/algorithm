@@ -1,3 +1,5 @@
+## https://www.acmicpc.net/problem/11655
+
 def solution(text):
     answer = ''
     for i in text:
