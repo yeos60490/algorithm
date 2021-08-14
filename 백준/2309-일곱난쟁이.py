@@ -1,3 +1,4 @@
+## https://www.acmicpc.net/problem/2309
 
 def solution(arr):
     pair = sum(arr) - 100
