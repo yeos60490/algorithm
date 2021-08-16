@@ -10,9 +10,5 @@ def solution(num):
 
 
 if __name__ == '__main__':
-    count = int(input())
-    ans = []
-    for i in range(count):
-        ans.append(solution(int(input())))
-
-    for i in ans : print(i)
+    for i in range(int(input())):
+        print(solution(int(input())))
