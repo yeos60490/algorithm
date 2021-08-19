@@ -1,3 +1,5 @@
+## https://www.acmicpc.net/problem/15988
+
 arr = [0,1,2,4]
 
 def solution(num):
