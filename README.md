@@ -45,7 +45,11 @@
       dic.move_to_end(key, last=True) ## 마지막으로 이동, False : 처음으로 이동
       dic.update({key,value}) ## 새로운 것 삽입
           
+- map
 
+      a = input()
+      arr = list(map(int, a.split(" ")))
+      
 - str
 
       str.startswith(str), str.endswith(str)
