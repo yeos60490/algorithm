@@ -45,10 +45,10 @@
       dic.move_to_end(key, last=True) ## 마지막으로 이동, False : 처음으로 이동
       dic.update({key,value}) ## 새로운 것 삽입
           
-- map
+- map, zip
 
-      a = input()
-      arr = list(map(int, a.split(" ")))
+      arr = list(map(int, str.split(" "))) ##str 을 int로 저장
+      arr = list(zip(a,b)) ##a,b 는 arr
       
 - str
 
