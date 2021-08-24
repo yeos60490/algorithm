@@ -49,6 +49,7 @@
 
       arr = list(map(int, str.split(" "))) ##str 을 int로 저장
       arr = list(zip(a,b)) ##a,b 는 arr
+      arr = list(map(list, zip(*list))) ##행,열 뒤집기 
       
 - str
 
