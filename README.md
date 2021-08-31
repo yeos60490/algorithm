@@ -55,3 +55,7 @@
 
       str.startswith(str), str.endswith(str)
   
+- deepcopy 
+      
+      import copy
+      list2 = copy.deepcopy(list1) 
