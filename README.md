@@ -6,3 +6,7 @@
 - 백준
 - sql
 
+-----------
+#### Note
+
+- [Python](https://github.com/yeos60490/algorithm/blob/master/note/python.md)
