@@ -50,6 +50,14 @@
       arr = list(map(int, str.split(" "))) ##str 을 int로 저장
       arr = list(zip(a,b)) ##a,b 는 arr
       arr = list(map(list, zip(*list))) ##행,열 뒤집기 
+      arr = list(map(''.join(), arr))
+      
+- itertools
+
+      import itertools
+      arr = [1,2,3]
+      list(itertools.combinations(arr, 3)) ## (1,2,3)
+      list(itertools.permutations(arr,3)) ## (1,2,3) (2,1,3) (3,2,1) ...
       
 - str
 
