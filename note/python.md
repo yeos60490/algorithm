@@ -50,6 +50,13 @@
       list(itertools.combinations(arr, 3)) ## (1,2,3)
       list(itertools.permutations(arr,3)) ## (1,2,3) (2,1,3) (3,2,1) ...
       
+- heapq (우선순위 큐 - 작은것)
+
+      import heapq
+      arr = [3,2,1,4]
+      heapq.heapify(arr)
+      heapq.heappush(arr, 2), heapq.heappop(arr)
+      
 - str
 
       str.startswith(str), str.endswith(str)
