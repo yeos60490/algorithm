@@ -4,6 +4,7 @@
 ## sorted(array, key=lambda x:x[1])
 
 
+###1
 import functools ## cmp_to_key 사용 
 
 def compare(a,b): #사용자 정의 비교 함수
@@ -19,30 +20,17 @@ def solution(numbers):
     return str(int(''.join(numbers)))
 
     
+###2
+import functools
 
-
-
-## 원래 코드 
-'''
-from collections import defaultdict
+def compare(a,b):
+    return 1 if int(a+b) > int(b+a) else -1
 
 def solution(numbers):
-    answer = defaultdict(str)
-    max_len = len(str(max(numbers)))
+    numbers = list(map(str,numbers))
+    num = sorted(numbers, key=functools.cmp_to_key(compare), reverse=True)
     
-    for i in range(len(numbers)):
-        string = str(numbers[i])
-        
-        key = string + string[0] * (max_len-len(string))
-        
-        if answer[key] + string > string + answer[key]:
-            answer[key] = answer[key] + string 
-        else: 
-            answer[key] = string + answer[key] 
-    
-    answer = sorted(answer.items(), reverse=True)
-    
-    return str(int(''.join(dict(answer).values())))
-    
-'''  
-    
+    return str(int(''.join(num)))
+
+
+
