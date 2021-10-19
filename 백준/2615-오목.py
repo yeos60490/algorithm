@@ -21,10 +21,13 @@ https://www.acmicpc.net/problem/2615
 
 '''
 
-def search(pos, board, tmpx,tmpy, curr):
+global board, N
+
+def search(pos,tmpx,tmpy, curr):
+    global board, N
     count = 0
     while count<6:
-        if tmpx in range(0,19) and tmpy in range(0,19):
+        if 0<=tmpx<N and 0<=tmpy<19:
             tmp = board[tmpx][tmpy]
             if tmp == curr:
                 count += 1
@@ -36,41 +39,39 @@ def search(pos, board, tmpx,tmpy, curr):
 
     return count
 
-def solution(board):
-    answer = 0
-    position = [(1,0), (1,1), (0,1), (1,-1)]
-    ansx, ansy = 0,0 
 
-    for i in range(len(board)):
-        for j in range(len(board)):
+def solution():
+    global board, N
+    answer, ansx, ansy = 0,0,0
+    position = [(1,0), (1,1), (0,1), (1,-1)]
+
+    for i in range(N):
+        for j in range(N):
             curr = board[i][j]
 
             if curr != 0: ##바둑이 있을 때
                 for pos in position: ##방향
-                    tmpx, tmpy = i+pos[0], j+pos[1]
                     count = 1
-                    count += search(pos, board, tmpx, tmpy, curr) 
-
-                    tmpx, tmpy = i-pos[0], j-pos[1]
-                    count += search((-pos[0],-pos[1]), board, tmpx, tmpy, curr) #반대방향
+                    count += search(pos, i+pos[0], j+pos[1], curr) 
+                    count += search((-pos[0],-pos[1]), i-pos[0], j-pos[1], curr) #반대방향
 
                     if count == 5:
-                        if pos == (1,-1):
-                            ansx, ansy = i+5, j-3
-                        else:
-                            ansx, ansy = i+1, j+1
+                        if pos == (1,-1): ansx, ansy = i+5, j-3
+                        else: ansx, ansy = i+1, j+1
                         answer = curr
+                        
                         print(answer)
-                        print(ansx,ansy)
+                        print(ansx, ansy)
                         return answer
 
     print(answer)
-    return answer          
+    return answer         
 
 if __name__ == '__main__':
-    arr = []
-    for i in range(19):
+    global board, N
+    board, N = [], 19
+    for i in range(N):
         tmp = list(map(int, input().split(' ')))
-        arr.append(tmp)
+        board.append(tmp)
 
-    solution(arr)
+    solution()
